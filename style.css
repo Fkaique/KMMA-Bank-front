@@ -1,0 +1,39 @@
+*, html{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    height: 100vh;
+    background-color: blueviolet;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    padding: 10px;
+    margin: 50px;
+    color: white;
+}
+
+p{
+    margin: 20px;
+}
+
+.container a{
+    color: white;
+}
+
+.container h1{
+    margin-bottom: 50px;
+    font-size: 50px;
+}
+
+.container button {
+    width: 300px;
+    height: 50px;
+    border-radius: 40px;
+
+}
