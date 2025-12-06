@@ -5,14 +5,64 @@
 }
 body{
     background-color: blueviolet;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    padding: 20px;
+    background-image: linear-gradient(to bottom,  white 60%, transparent);
+    /* box-shadow: 0 5px 20px #000; */
+}
+nav ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav li {
+    list-style: none;
+    font-size: 20px;
+}
+
+.item {
+    padding: 5px;
+    background-color: transparent;
+    color: black;
+    transition: all .5s;
+}
+.item:hover {
+    color: rgb(56, 56, 56);
+}
+
+.cred-nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+}
+
+.login {
+    border-right: 1px solid black;
+}
+.cadastro {
+
+}
+ul a {
+    color: black;
+    text-decoration: none;
+    /* color: white; */
 }
 
 .images{
-    position: fixed;
+    position: absolute;
     bottom: 0;
     width: 80%;
     display: flex;
     justify-content: space-between;
+    pointer-events: none;
+    z-index: -1;
 }
 
 .images img{
@@ -37,7 +87,10 @@ p{
 .container a{
     color: white;
 }
-
+.container button a{
+    text-decoration: none;
+    color: black;
+}
 .container h1{
     font-family: "Oswald", sans-serif;
     margin-bottom: 50px;
@@ -52,6 +105,15 @@ p{
 
 }
 
+footer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(96, 34, 190);
+    box-shadow: 0 -5px 30px #000;
+    margin-top: auto;
+    padding: 40px;
+}
+
 @media screen and (max-width: 1040px) {
     .images{
         position: fixed;
@@ -59,10 +121,20 @@ p{
         width: 100%;
         display: flex;
         justify-content: space-between;
+        pointer-events: none;
     }
     .images img{
         width: 200px;
     }
+}
+@media (max-width: 700px){
+    .item {
+        display: none;
+    }
+    .cred-nav {
+        display: none;
+    }
+    
 }
 @media screen and (max-width: 570px) {
     .images{
